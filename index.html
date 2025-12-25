@@ -178,7 +178,74 @@
     </div>
   </section>
 
-  
+   <!-- ============================== Services SECTION ==========================-->
+
+    <section id="services" class="relative overflow-hidden py-10 md:py-16 px-4 md:px-10 lg:px-20" aria-labelledby="services-title">
+        <div class="max-w-7xl mx-auto">
+            <div id="p-content" class="services-head mb-6 md:mb-10">
+                <h2 id="services-title" class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">Services</h2>
+                <p class="mt-2 text-gray-300 max-w-2xl text-sm md:text-base">
+                    We deliver end-to-end solutions that combine technology, trade, and infrastructure. Our expertise spans Software Development and IT Consultancy, Import and Export of machinery, equipment, and tools, Government Procurement and Supply, Office Automation
+                    and Network Infrastructure, and Web Development and Hosting. With a focus on innovation, efficiency, and reliability, we help businesses and institutions streamline operations, enhance productivity, and achieve sustainable growth.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 md:gap-10 place-items-center">
+                <!-- Ring / carousel column (measured & clipped) -->
+                <div id="ser-roll" class="relative mx-auto justify-self-center min-w-0 w-[min(340px,86vw)] h-[min(340px,86vw)] md:order-2 md:w-[360px] md:h-[360px] lg:w-[480px] lg:h-[480px] rounded-full overflow-hidden" role="region" aria-label="Service carousel">
+                    <!-- VISUAL wrapper (animated target) -->
+                    <div class="ser-roll-visual absolute inset-0 will-change-transform transform-gpu">
+                        <!-- decorative ring (child of visual so it rotates with visual) -->
+                        <div class="ser-roll-inner absolute inset-0 pointer-events-none">
+<svg viewBox="0 0 200 200" class="w-full h-full">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0%" stop-color="var(--brand)" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#0078D7" stop-opacity="0.25" />
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="82" stroke="url(#g1)" stroke-width="6" fill="none" />
+</svg>
+                        </div>
+
+                        <!-- cards container (placed inside visual but positioned using ser-roll measurements) -->
+                        <div id="service-cards" class="relative w-full h-full"></div>
+                    </div>
+                </div>
+
+                <!-- Detail column -->
+                <div id="ser-desc" style="background: url('assets/images/stroke.jpg') no-repeat; border:2px solid rgba(128, 128, 128, 0.274)" class="relative rounded-2xl flex items-center justify-center min-w-0 w-full md:order-1" >
+                    <div class="service-detail w-full max-w-xl" aria-live="polite">
+                        <div id="desc" class="p-5 md:p-8 backdrop-blur-md">
+                            <div class="flex items-start gap-4">
+                                <div id="detail-icon" class="p-3 rounded-lg bg-white/6 ring-1 ring-white/6" style="width:56px;height:56px"></div>
+                                <div class="min-w-0">
+                                    <h3 id="detail-title" class="text-2xl md:text-3xl font-extrabold text-white"></h3>
+                                    <p id="detail-long" class="mt-2 text-gray-300 max-w-xl text-[clamp(13px,1.8vw,16px)]"></p>
+                                </div>
+                            </div>
+
+                            <ul id="detail-features" class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3"></ul>
+
+                            <div class="mt-6 flex gap-3">
+                                <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/6 hover:bg-[var(--brand)] duration-200 text-white text-sm font-medium">
+                                    Talk to us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
   <!-- GSAP (exact version used) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
