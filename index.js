@@ -335,3 +335,98 @@
 
 
         
+//  ---------------------------------------> WHY ABBONOVA ------------------------------------
+        const FEATURES = [{
+                title: 'Product Strategy',
+                desc: 'Roadmaps that tie directly to user and business KPIs.'
+            },
+            {
+                title: 'UX & Design Systems',
+                desc: 'Consistent, accessible interfaces built for scale.'
+            },
+            {
+                title: 'Cloud-native Engineering',
+                desc: 'Cost-effective, resilient infra with automated CI/CD.'
+            },
+            {
+                title: 'Observability & SRE',
+                desc: 'Real-time monitoring, error budgets and runbooks.'
+            },
+            {
+                title: 'Machine Learning',
+                desc: 'Embedded ML solutions that drive customer value.'
+            },
+            {
+                title: 'API & Integrations',
+                desc: 'Secure, versioned APIs and partner integrations.'
+            }
+        ];
+
+        const featuresRoot = document.getElementById('features');
+
+        function createFeatureCard(f) {
+            const el = document.createElement('div');
+            el.setAttribute('role', 'listitem');
+            el.className = 'card p-5 rounded-xl reveal hover:shadow-xl';
+            el.tabIndex = 0;
+            el.innerHTML = `
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background:linear-gradient(180deg,var(--accent), rgba(76,195,252,0.18)); box-shadow: 0 10px 24px rgba(76,195,252,0.06);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v6l4 2" stroke="#02121A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-white">${f.title}</div>
+                        <div class="text-slate-400 text-sm mt-1">${f.desc}</div>
+                    </div>
+                </div>
+            `;
+                        return el;
+
+        }
+            // render features responsively — on large screens arrange 3 per row, medium 2, small 1
+        function renderFeatures() {
+            featuresRoot.innerHTML = '';
+            FEATURES.forEach((f) => {
+                const card = createFeatureCard(f);
+                featuresRoot.appendChild(card);
+            });
+
+            // update grid template based on width
+            if (window.innerWidth >= 1024) {
+                featuresRoot.style.display = 'grid';
+                featuresRoot.style.gridTemplateColumns = 'repeat(3,1fr)';
+            } else if (window.innerWidth >= 640) {
+                featuresRoot.style.display = 'grid';
+                featuresRoot.style.gridTemplateColumns = 'repeat(2,1fr)';
+            } else {
+                featuresRoot.style.display = 'block';
+            }
+
+            observeReveals();
+        }
+
+        // reveal-on-scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add('visible');
+            });
+        }, {
+            threshold: 0.12
+        });
+
+        function observeReveals() {
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        }
+
+        // init
+        window.addEventListener('load', () => renderFeatures());
+        window.addEventListener('resize', () => renderFeatures());
+
+        // accessible keyboard: 1–6 to focus feature cards
+        document.addEventListener('keydown', (e) => {
+            if (e.key >= '1' && e.key <= String(FEATURES.length)) {
+                const idx = Number(e.key) - 1;
+                const target = featuresRoot.querySelectorAll('[role="listitem"]')[idx];
+                if (target) target.focus();
+            }
+        });

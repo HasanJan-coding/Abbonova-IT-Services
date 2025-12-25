@@ -39,3 +39,48 @@
       #img-desc { left: 50% !important; transform: translateX(-50%) !important; bottom: 1rem !important; }
       .hero-card { height: 320px; }
     }
+
+
+        /* -----------------------WHY ABBONOVA ---------------------- */
+
+
+    @media (min-width:1106px) {
+        .feature-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width:640px) {
+        .feature-grid {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
+
+    #why-fix {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        /* default = 1 column */
+    }
+
+    @media (min-width: 1106px) {
+        #why-fix {
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+        }
+    }
+
+
+    .why-col-left,
+    .why-col-right {
+        grid-column: span 12 / span 12;
+    }
+
+    /* only split at 1106px+ */
+
+    @media (min-width: 1106px) {
+        .why-col-left {
+            grid-column: span 5 / span 5;
+        }
+        .why-col-right {
+            grid-column: span 7 / span 7;
+        }
+    }
