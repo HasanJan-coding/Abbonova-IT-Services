@@ -68,6 +68,9 @@
         }
     }
 
+    .why-col-left{
+        margin-bottom: 50px;
+    }
 
     .why-col-left,
     .why-col-right {
@@ -84,3 +87,15 @@
             grid-column: span 7 / span 7;
         }
     }
+
+    
+/* footer gradient */
+.footer-gradient {
+  background: linear-gradient(
+    180deg,
+    var(--bg) 0%,
+    #0a0f1a 28%,
+    rgba(79, 140, 201, 0.6) 58%,
+    #4cc4fc7e 100% 
+  );
+}

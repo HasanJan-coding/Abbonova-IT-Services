@@ -55,35 +55,29 @@
 
             // --------------------------- Hero Section -------------------------------------------
 
-    // Elements
-    const title = document.querySelector('#h-title');
-    const text = document.querySelector('#text');
-    const seeWork = document.querySelector('#see-work');
-    const img = document.querySelector('#img');
+   const tl = gsap.timeline();
 
-    // Split title into lines
-    const split = title ? new SplitText(title, { type: 'lines' }) : null;
-
-    const tl = gsap.timeline();
-
-    tl.from(split.lines,{
-      y:20,
-      opacity:0,
-      stagger:0.2,
-      duration:0.5
-    })
-    tl.from(text,{
+    tl.from('#text',{
       x:50,
+      rotateX:90,
+      duration:1,
       opacity:0
     })
-    tl.from(seeWork,{
+    tl.from('#see-work',{
       y:-20,
       opacity:0
     })
-    tl.from(img,{
+    
+    tl.from('#trust',{
+      y:-20,
       opacity:0
     })
+    
 
+    gsap.from('#img',{
+        delay:1,
+        opacity:0
+    })
  
  
     //---------------- ABOUT section reveal using ScrollTrigger-------------------------------
@@ -304,7 +298,6 @@
                         trigger: "#ser-roll",
                         start: "top 80%",
                         end: "top 30%",
-                        endTrigger: '#p-title',
                         toggleActions: "play none play reverse",
                     }
                 })
