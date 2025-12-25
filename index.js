@@ -84,3 +84,21 @@
       opacity:0
     })
 
+ 
+ 
+    //---------------- ABOUT section reveal using ScrollTrigger-------------------------------
+            
+      
+               gsap.from('#ab-content', {
+              scrollTrigger: {
+                trigger: '#ab-content',
+                start: 'top 80%',
+                toggleActions: 'play none play reverse',
+              },
+              x: -30,
+              opacity: 0,
+              duration: 0.4
+            });
+     
+  
+
