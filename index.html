@@ -54,100 +54,103 @@
     </nav>
   </header>
 
+   <!-------------------------------------------- HERO  ------------------------------------------->
+<section id="hero" aria-label="Hero, Smart IT & Trading"
+         class="relative min-h-[80vh] flex items-center justify-center py-8 sm:py-12 overflow-hidden bg-[var(--bg)]">
+  <div class="w-full max-w-7xl px-4 sm:px-6 lg:px-12 mx-auto relative z-10">
+    <!-- grid: mobile stacks (reversed), md+ shows two-column 12-col layout -->
+    <div id="hero-col" class="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-start md:items-center">
 
+      <!-- Left content (text) — on mobile this will appear AFTER the media via order utilities -->
+      <div class="md:col-span-7 order-2 md:order-1 relative z-[6]">
+        <div class="max-w-2xl mx-auto md:mx-0 text-center md:text-left">
+          <p class="inline-block px-3 py-1 rounded-full text-sm text-white/80 bg-white/5">Trusted by public & private</p>
 
+          <h1 id="h-title" class="text-white font-extrabold leading-tight mt-4">
+            <span class="block clamp">
+              Smart <span class="text-[var(--accent)]">IT</span> & Trading Solutions for <span class="text-[var(--accent)]">Modern</span> Businesses
+            </span>
+          </h1>
 
-            <!-------------------------------------------- HERO  ------------------------------------------->
+          <p id="text" class="mt-6 text-sm sm:text-base text-white/75 leading-relaxed">
+            ABBONOVA helps organizations modernize infrastructure, secure operations and accelerate digital outcomes from procurement to 24/7 SLA-backed support.
+          </p>
 
+          <ul class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm text-white/80">
+            <li class="flex items-center justify-center md:justify-start gap-3">
+              <svg class="w-5 h-5 shrink-0 flex-shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.2" />
+                <path d="M8 13l2 2 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Proven delivery</span>
+            </li>
 
+            <li class="flex items-center justify-center md:justify-start gap-3">
+              <svg class="w-5 h-5 shrink-0 flex-shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M7 10h10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+              <span>Secure procurement</span>
+            </li>
 
+            <li class="flex items-center justify-center md:justify-start gap-3">
+              <svg class="w-5 h-5 shrink-0 flex-shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M12 22v-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <span>24/7 SLA support</span>
+            </li>
+          </ul>
 
-  <section id="hero" aria-label="Hero, Smart IT & Trading" class="relative min-h-[80vh] flex items-center justify-center py-12 overflow-hidden" style="background-color:var(--bg);">
-    <div class="w-full max-w-7xl px-6 lg:px-12 mx-auto relative z-10">
-      <!-- grid -->
-      <div id="hero-col" class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div class="mt-6 sm:mt-8 flex flex-wrap items-center justify-center md:justify-start gap-3">
+            <a id="start-project" href="#contact"
+               class="inline-flex items-center justify-center px-6 py-3 rounded-xl text-sm font-semibold shadow-sm transition-colors duration-200 text-white hover:text-black min-w-[140px]"
+               style="background-image:linear-gradient(135deg,var(--accent),var(--brand));">
+              Start a Project
+            </a>
 
-        <!-- Left content -->
-        <div class="md:col-span-7 relative z-[6]">
-          <div class="max-w-2xl">
-            <p class="inline-block px-3 py-1 rounded-full text-sm text-white/80 bg-white/5">Trusted by public & private</p>
-
-            <!-- Title (id preserved for GSAP) -->
-            <h1 id="h-title" class="text-white font-extrabold leading-tight mt-4">
-              <span class="block text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem]">
-                Smart <span class="text-[var(--accent)]">IT</span> & Trading Solutions for <span class="text-[var(--accent)]">Modern</span> Businesses
-              </span>
-            </h1>
-
-            <!-- Text (id preserved for GSAP) -->
-            <p id="text" class="mt-6 text-sm sm:text-base text-white/75">
-              ABBONOVA helps organizations modernize infrastructure, secure operations and accelerate digital outcomes from procurement to 24/7 SLA-backed support.
-            </p>
-
-            <!-- Quick features -->
-            <ul class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm text-white/80">
-              <li class="flex items-start gap-3">
-                <!-- icon + text -->
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden>
-                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.2" />
-                  <path d="M8 13l2 2 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Proven delivery</span>
-              </li>
-
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden>
-                  <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.2"/>
-                  <path d="M7 10h10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-                </svg>
-                <span>Secure procurement</span>
-              </li>
-
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden>
-                  <path d="M12 2v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M12 22v-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-                <span>24/7 SLA support</span>
-              </li>
-            </ul>
-
-            <!-- CTAs (kept gradient background and hover text change) -->
-            <div class="mt-6 flex flex-wrap items-center gap-3">
-              <a id="start-project" href="#contact"
-                 class="inline-flex items-center justify-center px-6 py-3 rounded-xl text-sm font-semibold shadow-sm transition-colors duration-200 text-white hover:text-black"
-                 style="background-image:linear-gradient(135deg,var(--accent),var(--brand));">
-                Start a Project
-              </a>
-
-              <a id="see-work" href="#projects" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-medium border border-white/10 bg-transparent text-white/95">
-                See Work
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right media -->
-        <div class="md:col-span-5 relative z-[4] flex justify-center md:justify-end">
-          <div id="img" class="relative overflow-hidden w-[90%] max-w-sm sm:max-w-md md:max-w-lg hero-card" style="background-image: url('images/laptop.png');">
-            <!-- background image keeps layout stable -->
-          </div>
-
-          <div id="img-desc" class="absolute left-4 bottom-4 px-4 py-3 flex items-center gap-4">
-            <div class="flex flex-col">
-              <span class="text-white font-extrabold text-lg">98%</span>
-              <span class="text-xs text-white/80">Client satisfaction</span>
-            </div>
-            <div class="hidden sm:block h-10 w-px bg-white/10"></div>
-            <div class="text-xs text-white/80">
-              <div><strong class="text-white">12+</strong> years experience</div>
-            </div>
+            <a id="see-work" href="#projects"
+               class="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-medium border border-white/10 bg-transparent text-white/95 hover:bg-white/5 transition-colors duration-200">
+              See Work
+            </a>
           </div>
         </div>
       </div>
+
+      <!-- Right media — on mobile this will appear FIRST (order-1) and center -->
+      <div class="md:col-span-5 order-1 md:order-2 relative z-[4] flex justify-center md:justify-end mb-6 md:mb-0">
+        <!-- Tailwind-based hero image container (replaces .hero-card) -->
+        <div id="img" class="relative overflow-hidden h-[280px] sm:h-[300px] md:h-[400px] w-full max-w-sm sm:max-w-md bg-center bg-no-repeat bg-contain"
+             style="background-image:url('images/laptop.png');">
+        </div>
+        <div id="img-desc"
+             class="z-50 absolute left-1/2 -translate-x-1/2 bottom-[-20px] sm:bottom-[-25px] px-4 flex items-center gap-3 sm:gap-4">
+          <div class="flex flex-col items-center sm:items-start">
+            <span class="text-white font-extrabold text-base sm:text-lg">98%</span>
+            <span class="text-xs text-white/80 text-center sm:text-left">Client satisfaction</span>
+          </div>
+
+          <div class="hidden sm:block h-6 sm:h-10 w-px bg-white/10"></div>
+          
+          <div class="flex flex-col items-center sm:items-start">
+            <span class="text-white font-extrabold text-base sm:text-lg">12+</span>
+            <span class="text-xs text-white/80 text-center sm:text-left">years experience</span>
+          </div>
+          <div class="flex flex-col items-center sm:items-start">
+            <span class="text-white font-extrabold text-base sm:text-lg">12+</span>
+            <span class="text-xs text-white/80 text-center sm:text-left">years experience</span>
+          </div>
+        
+        </div>
+
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+
 
 
   <!--------------------------------------------------- ABOUT ---------------------------------------------->
