@@ -9,9 +9,7 @@
   <!-- Tailwind (dev CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- GSAP (exact version used) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
 
 </head>
 
@@ -75,8 +73,8 @@
             <p class="inline-block px-3 py-1 rounded-full text-sm text-white/80 bg-white/5">Trusted by public & private</p>
 
             <!-- Title (id preserved for GSAP) -->
-            <h1 id="title" class="text-white font-extrabold leading-tight mt-4">
-              <span class="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+            <h1 id="h-title" class="text-white font-extrabold leading-tight mt-4">
+              <span class="block text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem]">
                 Smart <span class="text-[var(--accent)]">IT</span> & Trading Solutions for <span class="text-[var(--accent)]">Modern</span> Businesses
               </span>
             </h1>
@@ -132,7 +130,7 @@
 
         <!-- Right media -->
         <div class="md:col-span-5 relative z-[4] flex justify-center md:justify-end">
-          <div id="img" class="relative overflow-hidden w-full max-w-sm sm:max-w-md md:max-w-lg hero-card" style="background-image: url('images/laptop.png');">
+          <div id="img" class="relative overflow-hidden w-[90%] max-w-sm sm:max-w-md md:max-w-lg hero-card" style="background-image: url('images/laptop.png');">
             <!-- background image keeps layout stable -->
           </div>
 
@@ -147,10 +145,45 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
+
+
+  <!--------------------------------------------------- ABOUT ---------------------------------------------->
+
+
+  <section class="relative py-12 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="items-center flex gap-6 flex-col sm:flex-row">
+        <div id="roll" class="flex justify-center md:justify-start flex-shrink-0">
+          <div style="width: clamp(10rem, 20vw, 15rem); height: clamp(10rem, 20vw, 15rem); background: rgba(20,20,20,0.85); border: 3px solid var(--brand); box-shadow: 0 12px 40px rgba(79,140,201,0.2);"
+               class="rounded-full flex items-center justify-center shadow-xl">
+            <img src="images/logo.png" alt="Abbona Logo" class="block w-auto h-[clamp(7rem,12vw,15rem)] object-contain" />
+          </div>
+        </div>
+
+        <div id="ab-content" class="col-span-12 md:col-span-8 min-w-0">
+          <h2 id="ab-title" class="clamp mt-3 font-bold text-white leading-snug">ABOUT <span style="color:var(--accent)">US</span></h2>
+
+          <p id="ab-text" class="text-[1rem] pt-3 text-white/75">
+            ABBONOVA offers cutting-edge IT solutions and general trading expertise. We serve the private and government sectors, delivering reliable services, products, and digital solutions.
+            Abbonova is an innovative IT solutions company helping businesses with web, software, and digital transformation. We combine creativity and technology to deliver results that matter.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- GSAP (exact version used) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"
+    integrity="sha512-wOeEC+9qERAzhliwBFPDb6t8TiFFxdxG8vhK/Ygs7TuC44bpg8pg/X2/U/u+0X4fK05wb9id1EIipnF02+CFQw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
   <script src="index.js"></script>
 </body>
 </html>

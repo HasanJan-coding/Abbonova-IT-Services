@@ -55,58 +55,32 @@
 
             // --------------------------- Hero Section -------------------------------------------
 
+    // Elements
+    const title = document.querySelector('#h-title');
+    const text = document.querySelector('#text');
+    const seeWork = document.querySelector('#see-work');
+    const img = document.querySelector('#img');
 
-    document.addEventListener('DOMContentLoaded', function () {
-      try {
-        // Respect user preference for reduced motion
-        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // Split title into lines
+    const split = title ? new SplitText(title, { type: 'lines' }) : null;
 
-        if (typeof gsap === 'undefined') return;
+    const tl = gsap.timeline();
 
-        // Register ScrollTrigger if available (fail-safe)
-        try { if (gsap.registerPlugin) gsap.registerPlugin(window.ScrollTrigger); } catch (e) { /* ignore */ }
-
-        const tl = gsap.timeline();
-
-        const title = document.getElementById('title');
-        const text = document.getElementById('text');
-        const startBtn = document.getElementById('start-project');
-        const seeWork = document.getElementById('see-work');
-        const img = document.getElementById('img');
-
-        if (title) {
-          try { tl.fromTo(title, { rotateX: 20, opacity: 0 }, { rotateX: 0, opacity: 1, duration: 0.8 }); } catch (e) { console.error('ERR_ANIM_TITLE', e); }
-        }
-        if (text) {
-          try { tl.from(text, { x: '18%', opacity: 0, duration: 0.6 }, '-=0.5'); } catch (e) { console.error('ERR_ANIM_TEXT', e); }
-        }
-        if (startBtn || seeWork) {
-          try { tl.from([startBtn, seeWork], { y: -10, opacity: 0, stagger: 0.08, duration: 0.45 }, '-=0.35'); } catch (e) { console.error('ERR_ANIM_CTA', e); }
-        }
-        if (img) {
-          try { tl.from(img, { scale: 0.98, opacity: 0, duration: 0.8 }, '-=0.45'); } catch (e) { console.error('ERR_ANIM_IMG', e); }
-        }
-
-        // ABOUT section reveal using ScrollTrigger if present
-        try {
-          if (window.ScrollTrigger) {
-            gsap.from('#ab-content', {
-              scrollTrigger: {
-                trigger: '#ab-content',
-                start: 'top 80%',
-                toggleActions: 'play none none none'
-              },
-              x: -30,
-              opacity: 0,
-              duration: 0.7
-            });
-          }
-        } catch (e) {
-          console.error('ERR_SCROLL_AB', e);
-        }
-
-      } catch (e) {
-        console.error('ERR_GSAP_INIT', e);
-      }
-    });
+    tl.from(split.lines,{
+      y:20,
+      opacity:0,
+      stagger:0.2,
+      duration:0.5
+    })
+    tl.from(text,{
+      x:50,
+      opacity:0
+    })
+    tl.from(seeWork,{
+      y:-20,
+      opacity:0
+    })
+    tl.from(img,{
+      opacity:0
+    })
 
